@@ -11,6 +11,11 @@
   "dependencies": {
     "@prisma/client": "^6.5.0",
     "@prisma/extension-accelerate": "^1.2.2",
+    "@progress/kendo-drawing": "^1.21.2",
+    "@progress/kendo-licensing": "^1.5.1",
+    "@progress/kendo-react-all": "^10.0.0",
+    "@progress/kendo-theme-default": "^10.3.1",
+    "better-auth": "^1.2.4",
     "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
