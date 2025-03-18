@@ -54,7 +54,7 @@ export default function SigninPage() {
                     <Controller
                         name="password"
                         control={control}
-                        render={({ field }) => <Input {...field} label='Set a Password' type={'password'} style={{
+                        render={({ field }) => <Input {...field} label='Password' type={'password'} style={{
                             width: '100%',
                         }} />}
                     />

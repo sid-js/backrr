@@ -4,8 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: var(--kendo-color-primary)
+  height: 100svh;
+  background: var(--kendo-color-primary);
+  margin-top: -60px;
 }
 
 .wrapper {
@@ -21,11 +22,10 @@
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 }
 
 .form {

@@ -18,6 +18,7 @@
     padding: 20px;
     background: var(--kendo-color-base);
     border-radius: var(--kendo-border-radius-lg);
+    gap: 20px;
   }
   
   .logo {

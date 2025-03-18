@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@progress/kendo-theme-default/dist/all.css";
 import './global.css'
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`antialiased k-body`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

@@ -28,9 +28,15 @@ model User {
   updatedAt     DateTime
   sessions      Session[]
   accounts      Account[]
-
+  role          Role      @default(CREATOR)
+  industry      String?
   @@unique([email])
   @@map("user")
+}
+
+enum Role {
+  SPONSOR
+  CREATOR
 }
 
 model Session {
