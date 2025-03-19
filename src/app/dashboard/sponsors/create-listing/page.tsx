@@ -12,17 +12,13 @@ import { Fade } from '@progress/kendo-react-animation';
 import { createSponsorListing } from '@/app/actions/sponsor/createSponsorListing';
 import { SponsorListingFormInputs, sponsorListingSchema } from '@/lib/schema/create-sponsor-schema';
 
-// Define the schema for form validation using Zod
 
-
-// Define the steps for the stepper
 const steps = [
     { label: 'Basic Info' },
     { label: 'Details' },
     { label: 'Review' },
 ];
 
-// Define the industries list
 const industries = [
     'Technology',
     'Healthcare',
@@ -34,7 +30,6 @@ const industries = [
     'Other'
 ];
 
-// Define the sponsorship types
 const sponsorshipTypes = [
     'Product Placement',
     'Brand Integration',
@@ -88,7 +83,6 @@ export default function CreateListingForm() {
 
         setLoading(true);
         try {
-            // Here you would typically call an API to create the listing
             console.log('Form data submitted:', data);
 
             const response = await createSponsorListing(data);
