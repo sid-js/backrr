@@ -6,6 +6,7 @@ import { Button } from '@progress/kendo-react-buttons';
 import Image from 'next/image';
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
+import { useDrawerStateStore } from './DrawerContainer';
 
 export default function Navbar() {
     const {
@@ -15,10 +16,12 @@ export default function Navbar() {
         refetch
     } = authClient.useSession()
     const router = useRouter();
+    const isDrawerOpen = useDrawerStateStore((state) => state.isDrawerOpen);
+    const setIsDrawerOpen = useDrawerStateStore((state) => state.setIsDrawerOpen);
     return (
         <AppBar themeColor="primary">
             <AppBarSection>
-                <Button type="button" fillMode="flat" svgIcon={menuIcon} />
+                <Button onClick={() => setIsDrawerOpen(!isDrawerOpen)} type="button" fillMode="flat" svgIcon={menuIcon} />
             </AppBarSection>
 
             <AppBarSpacer style={{ width: 4 }} />
