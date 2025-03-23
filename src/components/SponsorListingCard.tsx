@@ -1,7 +1,8 @@
 import { SponsorListing } from "@prisma/client";
 import { Avatar, Button, Card, CardActions, CardBody, CardHeader, CardSubtitle, CardTitle, Chip, ChipList } from "@progress/kendo-react-all";
 import { prettyNumber } from '@based/pretty-number'
-import { eyeIcon } from '@progress/kendo-svg-icons';
+import { Eye } from 'lucide-react';
+import Link from "next/link";
 
 export default function SponsorListingCard({
     sponsorListing,
@@ -59,7 +60,6 @@ export default function SponsorListingCard({
                         value={sponsorListing.targetAudienceSize}
 
                         themeColor={"base"}
-                        svgIcon={eyeIcon}
                     />
                 </div>
 
@@ -68,16 +68,24 @@ export default function SponsorListingCard({
 
             </CardBody>
             <CardActions>
-                <Button style={{
+                <Link style={{
                     width: '100%'
-                }} themeColor={"primary"}>
-                    Apply
-                </Button>
-                <Button style={{
-                    width: '100%'
-                }} themeColor={"base"}>
-                    View
-                </Button>
+                }} href={`sponsors/${sponsorListing.id}/apply`}>
+                    <Button style={{
+                        width: '100%'
+                    }} themeColor={"primary"}>
+                        Apply
+                    </Button>
+                </Link>
+                <Link style={{
+                    width: "fit-content"
+                }} href={`/dashboard/sponsors/${sponsorListing.id}`}>
+                    <Button style={{
+                        width: '100%'
+                    }} themeColor={"base"}>
+                        View
+                    </Button>
+                </Link>
             </CardActions>
         </Card>
     )

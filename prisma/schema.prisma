@@ -14,18 +14,22 @@ datasource db {
 }
 
 model User {
-  id             String           @id
-  name           String
-  email          String
-  emailVerified  Boolean
-  image          String?
-  createdAt      DateTime
-  updatedAt      DateTime
-  sessions       Session[]
-  accounts       Account[]
-  role           Role             @default(CREATOR)
-  industry       String?
-  SponsorListings SponsorListing[]
+  id                 String               @id
+  name               String
+  email              String
+  emailVerified      Boolean
+  image              String?
+  createdAt          DateTime
+  updatedAt          DateTime
+  sessions           Session[]
+  accounts           Account[]
+  role               Role                 @default(CREATOR)
+  industry           String?
+  SponsorListings    SponsorListing[]
+  SponsorApplications SponsorApplication[]
+  totalAudience      Int                  @default(0)
+  socialLinks        String[]
+
 
   @@unique([email])
   @@map("user")
@@ -82,17 +86,29 @@ model Verification {
 }
 
 model SponsorListing {
-  id                 String   @id @default(cuid())
+  id                 String               @id @default(cuid())
   title              String
   companyName        String
   description        String?
   logo               String?
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
   type               String
   budget             Int
   targetAudienceSize Int
   industry           String
   createdBy          String
-  createdByUser      User     @relation(fields: [createdBy], references: [id])
+  createdByUser      User                 @relation(fields: [createdBy], references: [id])
+  applications       SponsorApplication[]
+}
+
+model SponsorApplication {
+  id        String         @id @default(cuid())
+  listingId String
+  listing   SponsorListing @relation(fields: [listingId], references: [id])
+  userId    String
+  user      User           @relation(fields: [userId], references: [id])
+  note      String?
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
 }

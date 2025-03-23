@@ -1,6 +1,7 @@
 import { getSponsors } from "@/app/actions/sponsor/getSponsors";
 import SponsorListingCard from "@/components/SponsorListingCard";
 import { Button, GridLayout } from "@progress/kendo-react-all";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default async function SponsorsPage() {
@@ -16,9 +17,11 @@ export default async function SponsorsPage() {
                 alignItems: 'center',
             }}>
                 <h1>Discover Sponsors</h1>
-                <Button themeColor="primary">
-                    Become a Sponsor
-                </Button>
+                <Link href="/sponsors/create-listing">
+                    <Button themeColor="primary">
+                        Become a Sponsor
+                    </Button>
+                </Link>
             </div>
             {sponsors && sponsors.length > 0 && (
                 <div
