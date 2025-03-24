@@ -67,7 +67,7 @@ export default function SigninPage() {
                     marginTop: '1rem',
                     textAlign: 'center'
                 }}>
-                    Don't have an account? <a href="/signup" style={{
+                    Don&apos;t have an account? <a href="/signup" style={{
                         color: 'var(--primary)',
                         textDecoration: 'none'
                     }}>Sign up</a>
