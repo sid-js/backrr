@@ -28,7 +28,7 @@ export default function SigninPage() {
         })
         if (!response.error) {
             setLoading(false)
-            router.push('/')
+            router.push('/dashboard')
         } else {
             setLoading(false)
             setError(response.error.message ?? response.error.statusText)
@@ -63,6 +63,15 @@ export default function SigninPage() {
                         width: '100%',
                     }}>Sign In</Button>
                 </form>
+                <div style={{
+                    marginTop: '1rem',
+                    textAlign: 'center'
+                }}>
+                    Don't have an account? <a href="/signup" style={{
+                        color: 'var(--primary)',
+                        textDecoration: 'none'
+                    }}>Sign up</a>
+                </div>
             </div>
             <NotificationGroup
                 style={{

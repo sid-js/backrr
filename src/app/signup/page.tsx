@@ -30,7 +30,7 @@ export default function SignupPage() {
         })
         if (!response.error) {
             setLoading(false)
-            router.push('/')
+            router.push('/onboarding')
         } else {
             setLoading(false)
             setError(response.error.message ?? response.error.statusText)
@@ -72,6 +72,15 @@ export default function SignupPage() {
                         width: '100%',
                     }}>Sign Up</Button>
                 </form>
+                <div style={{
+                    marginTop: '1rem',
+                    textAlign: 'center'
+                }}>
+                    Already have an account? <a href="/signin" style={{
+                        color: 'var(--primary)',
+                        textDecoration: 'none'
+                    }}>Sign in</a>
+                </div>
             </div>
             <NotificationGroup
                 style={{
