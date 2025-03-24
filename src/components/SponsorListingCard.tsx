@@ -1,5 +1,7 @@
 import { SponsorListing } from "@prisma/client";
-import { Avatar, Button, Card, CardActions, CardBody, CardHeader, CardSubtitle, CardTitle, Chip, ChipList } from "@progress/kendo-react-all";
+import { Avatar } from '@progress/kendo-react-layout';
+import { Button, Chip, ChipList } from '@progress/kendo-react-buttons';
+import { Card, CardActions, CardBody, CardHeader, CardSubtitle, CardTitle } from '@progress/kendo-react-layout';
 import { prettyNumber } from '@based/pretty-number'
 import { Eye } from 'lucide-react';
 import Link from "next/link";

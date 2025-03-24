@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
-import { Button, Dialog, DialogActionsBar } from '@progress/kendo-react-all';
+import { Button } from '@progress/kendo-react-buttons';
+import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs';
 import { Notification, NotificationGroup } from '@progress/kendo-react-notification';
 import { Fade } from '@progress/kendo-react-animation';
 import { useRouter } from 'next/navigation';

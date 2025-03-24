@@ -1,6 +1,6 @@
 import { getDashboardData } from "@/app/actions/dashboard/getDashboardData";
 import SponsorListingCard from "@/components/SponsorListingCard";
-import { Card, CardBody, CardTitle } from "@progress/kendo-react-all";
+import { Card, CardBody, CardTitle } from '@progress/kendo-react-layout';
 import { Check, Clock, FileText, Users } from "lucide-react";
 import Link from "next/link";
 

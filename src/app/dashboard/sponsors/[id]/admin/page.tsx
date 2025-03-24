@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { TabStrip, TabStripTab } from '@progress/kendo-react-all';
-import { Button, Card } from '@progress/kendo-react-all';
+import { TabStrip, TabStripTab } from '@progress/kendo-react-layout';
+import { Button } from '@progress/kendo-react-buttons';
+import { Card } from '@progress/kendo-react-layout';
 import Link from 'next/link';
 import ApplicationsTab from './ApplicationsTab';
 import EditListingTab from './EditListingTab';

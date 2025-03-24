@@ -1,6 +1,7 @@
 import { getSponsors } from "@/app/actions/sponsor/getSponsors";
 import SponsorListingCard from "@/components/SponsorListingCard";
-import { Button, GridLayout } from "@progress/kendo-react-all";
+import { Button } from '@progress/kendo-react-buttons';
+import { GridLayout } from '@progress/kendo-react-layout';
 import Link from "next/link";
 import { notFound } from "next/navigation";
 

@@ -1,7 +1,9 @@
 'use client';
 
 import { User } from '@prisma/client';
-import { Card, CardHeader, CardBody, CardTitle, CardSubtitle, Avatar, Chip } from '@progress/kendo-react-all';
+import { Avatar } from '@progress/kendo-react-layout';
+import { Card, CardHeader, CardBody, CardTitle, CardSubtitle } from '@progress/kendo-react-layout';
+import { Chip } from '@progress/kendo-react-buttons';
 import { prettyNumber } from '@based/pretty-number';
 import { getSocialIcon } from './SocialIcons';
 

@@ -2,7 +2,8 @@
 import Image from 'next/image'
 import styles from './styles.module.css'
 import { useForm, Controller, SubmitHandler } from "react-hook-form"
-import { Button, Input } from '@progress/kendo-react-all'
+import { Button } from '@progress/kendo-react-buttons'
+import { Input } from '@progress/kendo-react-inputs'
 import { authClient } from '@/lib/auth-client'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'

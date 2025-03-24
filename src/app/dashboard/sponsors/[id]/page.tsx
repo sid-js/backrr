@@ -1,6 +1,9 @@
 import { getSponsorFromId } from '@/app/actions/sponsor/getSponsorFromId'
 import { prettyNumber } from '@based/pretty-number'
-import { Avatar, Button, Card, CardBody, CardHeader, CardSubtitle, CardTitle, Chip } from '@progress/kendo-react-all'
+import { Avatar } from '@progress/kendo-react-layout';
+import { Button } from '@progress/kendo-react-buttons'
+import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from '@progress/kendo-react-layout'
+import { Chip } from '@progress/kendo-react-buttons'
 import { ArrowLeft, Calendar, Globe, Tag, Users } from 'lucide-react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'

@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { Button, Input, DropDownList, NumericTextBox, Label } from "@progress/kendo-react-all";
+import { Button } from '@progress/kendo-react-buttons';
+import { Input, NumericTextBox } from '@progress/kendo-react-inputs';
+import { DropDownList } from '@progress/kendo-react-dropdowns';
+import { Label } from '@progress/kendo-react-labels';
 import { useRouter } from "next/navigation";
 import { Notification, NotificationGroup } from "@progress/kendo-react-notification";
 import { Fade } from "@progress/kendo-react-animation";
