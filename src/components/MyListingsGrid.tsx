@@ -73,7 +73,7 @@ export default function MyListingsGrid({ listings, error }: MyListingsGridProps)
                     onRowClick={
                         (e: any) => {
                             const listing = e.dataItem;
-                            router.push(`/dashboard/sponsors/${listing.id}`);
+                            router.push(`/dashboard/sponsors/${listing.id}/admin`);
                         }
                     }
                     data={listings}
