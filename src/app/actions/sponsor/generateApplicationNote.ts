@@ -11,10 +11,11 @@ interface GenerateNoteParams {
 export async function generateApplicationNote({ listingId }: GenerateNoteParams): Promise<{ content: string } | { error: string }> {
   try {
     // Get the current user
-    const user = await getCurrentUser();
-    if (!user || 'error' in user) {
+    const userResponse = await getCurrentUser();
+    if (!userResponse || 'error' in userResponse || !userResponse.user) {
       return { error: 'User not authenticated' };
     }
+    const user = userResponse.user;
     
     // Get the sponsor listing
     const listing = await prisma.sponsorListing.findUnique({

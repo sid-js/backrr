@@ -4,11 +4,13 @@ import * as React from 'react';
 import { Drawer, DrawerContent, DrawerSelectEvent } from '@progress/kendo-react-layout';
 import { useRouter } from 'next/navigation';
 import { create } from 'zustand'
-import { homeIcon, dollarIcon } from '@progress/kendo-svg-icons';
+import { homeIcon, dollarIcon, fileTxtIcon, userIcon } from '@progress/kendo-svg-icons';
 
 const items = [
     { text: 'Dashboard', selected: true, route: '/dashboard', svgIcon: homeIcon },
     { text: 'Sponsors', route: '/dashboard/sponsors', svgIcon: dollarIcon },
+    {text: 'My Listings', route: '/dashboard/sponsors/my-listings', svgIcon: fileTxtIcon},
+    {text: 'My Profile', route: '/dashboard/profile', svgIcon: userIcon},
 ];
 
 interface DrawerState {
@@ -16,7 +18,7 @@ interface DrawerState {
     setIsDrawerOpen: (isDrawerOpen: boolean) => void;
 }
 export const useDrawerStateStore = create<DrawerState>((set) => ({
-    isDrawerOpen: false,
+    isDrawerOpen: true,
     setIsDrawerOpen: (isDrawerOpen: boolean) => set({ isDrawerOpen }),
 }))
 

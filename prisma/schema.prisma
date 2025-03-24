@@ -111,4 +111,11 @@ model SponsorApplication {
   note      String?
   createdAt DateTime       @default(now())
   updatedAt DateTime       @updatedAt
+  status    ApplicationStatus @default(PENDING)
+}
+
+enum ApplicationStatus {
+  PENDING
+  ACCEPTED
+  REJECTED 
 }

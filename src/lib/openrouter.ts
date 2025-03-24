@@ -30,7 +30,7 @@ export async function generateText(prompt: string): Promise<string> {
         'X-Title': 'Backrr - Sponsorship Platform'
       },
       body: JSON.stringify({
-        model: 'gryphe/mythomax-l2-13b', // Free model on OpenRouter
+        model: 'mistralai/mistral-small-3.1-24b-instruct:free', // Free model on OpenRouter
         messages: [
           {
             role: 'system',
